@@ -1,0 +1,1 @@
+global.projectionScalar = .25
