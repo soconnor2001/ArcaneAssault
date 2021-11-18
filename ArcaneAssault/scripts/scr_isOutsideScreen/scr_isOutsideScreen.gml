@@ -3,9 +3,18 @@
 
 
 
-function scr_isOutsideScreen(thisObj,xOffset,yOffset,sprH,sprW){
+function scr_isOutsideScreen(thisObj,xOffset = undefined,yOffset = undefined,sprH = undefined,sprW = undefined){
 	
 	//show_debug_message(string(sprW)+" "+string(xOffset)+" "+string(abs(sprW)-abs(xOffset)));
+	
+	if(xOffset = undefined || yOffset == undefined || sprH == undefined || sprW == undefined){
+		tempObj = instance_create_layer(0,0,"Instances",thisObj);
+		xOffset = tempObj.sprite_xoffset;
+		yOffset = tempObj.sprite_yoffset;
+		sprH = tempObj.sprite_height;
+		sprW = tempObj.sprite_width;
+		instance_destroy(tempObj);
+	}
 	
 	return ( !((camera_get_view_x(view_camera[0])<thisObj.x+(abs(sprW)-abs(xOffset)) and 
 		thisObj.x-abs(xOffset)<(camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0]))) and

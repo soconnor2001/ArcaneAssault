@@ -5,3 +5,5 @@
 canAttack = true
 currentCompanion = noone;
 attackObj=noone;
+
+playerHealth = maxHealth;

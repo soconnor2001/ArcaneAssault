@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"obj_GUI","path":"objects/obj_GUI/obj_GUI.yy",},"order":7,},
     {"id":{"name":"scr_isOutsideScreen","path":"scripts/scr_isOutsideScreen/scr_isOutsideScreen.yy",},"order":5,},
     {"id":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"order":5,},
     {"id":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"order":2,},
