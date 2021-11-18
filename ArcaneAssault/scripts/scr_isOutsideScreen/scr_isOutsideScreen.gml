@@ -8,7 +8,12 @@ function scr_isOutsideScreen(thisObj,xOffset = undefined,yOffset = undefined,spr
 	//show_debug_message(string(sprW)+" "+string(xOffset)+" "+string(abs(sprW)-abs(xOffset)));
 	
 	if(xOffset = undefined || yOffset == undefined || sprH == undefined || sprW == undefined){
-		tempObj = instance_create_layer(0,0,"Instances",thisObj);
+		
+		try{
+			tempObj = instance_create_layer(0,0,"Instances",thisObj);
+		}catch(e){
+			tempObj = instance_create_layer(0,0,"Instances",thisObj.object_index);
+		}
 		xOffset = tempObj.sprite_xoffset;
 		yOffset = tempObj.sprite_yoffset;
 		sprH = tempObj.sprite_height;

@@ -16,6 +16,12 @@ with(obj_enemy){
 	if(!scr_isOutsideScreen(id)){
 		//draw enemy healthbar
 		
+		eHealthH = 15
+		eHealthW = abs(sprite_width/2);
+		draw_healthbar(x-camera_get_view_x(view_camera[0])-eHealthW/2,y-sprite_height-eHealthH - 5,x-camera_get_view_x(view_camera[0])+eHealthW/2,y-sprite_height-5,(id.enemyHealth/id.maxHealth)*100,
+			c_black,c_red,c_green,0,true,true);
+		
+		
 	}
 }
 
