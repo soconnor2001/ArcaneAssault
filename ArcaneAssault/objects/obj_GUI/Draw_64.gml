@@ -26,3 +26,12 @@ with(obj_enemy){
 }
 
 // draw healthbars for companions
+with(obj_companion){
+	if(awake){
+		cHealthH = 15
+		cHealthW = abs(sprite_width/2);
+		draw_healthbar(x-camera_get_view_x(view_camera[0])-cHealthW/2,y-sprite_height-cHealthH - 5,x-camera_get_view_x(view_camera[0])+cHealthW/2,y-sprite_height-5,(id.compHealth/id.maxHealth)*100,
+			c_black,c_red,c_green,0,true,true);
+	}
+}
+

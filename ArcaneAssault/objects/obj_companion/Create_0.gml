@@ -3,3 +3,5 @@
 awake = false;
 canAttack = true;
 attackObj = noone;
+
+compHealth = maxHealth;

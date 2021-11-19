@@ -6,7 +6,15 @@ function scr_checkBox(x1,y1,x2,y2,objCollider){
 	colCheck.image_yscale = (y2-y1)/2
 	with(colCheck){
 		
+		
+		
 		rtnVal = instance_place(x1,y1,objCollider)
+		
+		if(rtnVal and rtnVal.object_index == obj_companion and !rtnVal.awake){
+			//return no collision if collided with not yet awake companion
+			rtnVal = noone;
+		}
+		
 		//instance_destroy(colCheck)
 		return rtnVal
 	}
