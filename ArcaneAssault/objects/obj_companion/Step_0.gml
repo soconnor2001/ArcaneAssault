@@ -29,7 +29,7 @@ if(compHealth > 0){
 
 
 		if(nearestEnemy != noone){
-			scr_moveToward(id,nearestEnemy,compSpeed);
+			scr_moveToward(id,nearestEnemy,compSpeed*1.5);
 		}else{
 			scr_moveToward(id,obj_player,compSpeed);
 		}

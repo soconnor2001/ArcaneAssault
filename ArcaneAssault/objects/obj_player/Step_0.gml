@@ -63,6 +63,11 @@ if(playerHealth > 0){
 		event_user(0);
 	
 	}
+	
+	//check if all enemies dead
+	if(!instance_exists(obj_enemy)){
+		room_goto_next();
+	}
 
 }
 else{
