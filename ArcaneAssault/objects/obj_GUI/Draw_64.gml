@@ -4,11 +4,23 @@
 
 //player health
 
-pHealthW = view_get_wport(0)/2 - screenMargins;
+pHealthW = view_get_wport(0)*(3/8.0) - screenMargins;
 pHealthH = 2*screenMargins;
 
 draw_healthbar(screenMargins,screenMargins,pHealthW+screenMargins,pHealthH+screenMargins,(obj_player.playerHealth/obj_player.maxHealth)*100,
 	c_black,c_red,c_green,0,true,true);
+	
+	
+//player Mana
+
+pManaW = view_get_wport(0)*(3/8.0) + screenMargins;
+pManaH = pHealthH;
+
+draw_healthbar(view_get_wport(0)-pManaW-screenMargins,screenMargins,view_get_wport(0)-screenMargins,pManaH+screenMargins,(obj_player.mana/obj_player.maxMana)*100,
+	c_black,7637829, 16776960, 1,true,true); 
+	//7637829 = light cyan
+	// 16776960 = dark cyan
+
 	
 // draw healthbars for enemies on screen
 

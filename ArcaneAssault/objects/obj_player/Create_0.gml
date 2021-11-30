@@ -3,7 +3,11 @@
 
 
 canAttack = true
-currentCompanion = noone;
+currentCompanions = ds_list_create();
 attackObj=noone;
 
 playerHealth = maxHealth;
+
+mana = 0;
+
+manaSummonCost = 5;

@@ -4,4 +4,4 @@
 
 awake = true;
 
-sprite_index = spr_tempBroomCompanion
+sprite_index = awakeSprite
