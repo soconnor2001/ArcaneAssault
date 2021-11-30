@@ -9,6 +9,7 @@ if(compHealth > 0){
 	
 		//move toward nearest enemy
 	
+		//find nearest onscreen enemy	
 		shortestDistance = infinity;
 		nearestEnemy = noone;
 		for(i = 0; i<instance_number(obj_enemy);i++){
@@ -29,9 +30,21 @@ if(compHealth > 0){
 
 
 		if(nearestEnemy != noone){
+			//if found enemy, attack enemy
 			scr_moveToward(id,nearestEnemy,compSpeed*1.5);
 		}else{
-			scr_moveToward(id,obj_player,compSpeed);
+			//else fall in line behind player
+			
+			if(instance_exists(obj_player)){
+				playerObj = instance_find(obj_player,0);
+				selfIndex = ds_list_find_index(playerObj.currentCompanions,id);
+				show_debug_message(selfIndex);
+				if(selfIndex <= 0){
+					scr_moveToward(id,obj_player,compSpeed);
+				}else{
+					scr_moveToward(id,ds_list_find_value(playerObj.currentCompanions,selfIndex-1),compSpeed)
+				}
+			}
 		}
 	
 	

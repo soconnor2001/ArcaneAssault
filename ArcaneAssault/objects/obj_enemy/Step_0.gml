@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description move and attack if on screen
 // You can write your code in this editor
 
 if(enemyHealth > 0){
@@ -10,8 +10,30 @@ if(enemyHealth > 0){
 	//show_debug_message(seeking)
 
 	if(seeking and instance_exists(obj_player)){
-	
-		scr_moveToward(id,obj_player,enemySpeed);
+		
+		playerObj = instance_find(obj_player,0);
+		
+		
+		//first, check for nearby companions
+		
+		//this is the farthest an enemy will go to attack a companion
+		shortestDistance = 360;
+		closestComp = noone;
+		for(i = 0; i < ds_list_size(playerObj.currentCompanions); i++){
+			comp = ds_list_find_value(playerObj.currentCompanions,i);
+			if(point_distance(x,y,comp.x,comp.y) < shortestDistance){
+				shortestDistance = point_distance(x,y,comp.x,comp.y);
+				closestComp = comp;
+			}
+		}
+		if(closestComp != noone){
+			
+			//go after companion
+			scr_moveToward(id,closestComp,enemySpeed);
+		}else{
+			//go after player
+			scr_moveToward(id,playerObj,enemySpeed);
+		}
 	
 	}
 
