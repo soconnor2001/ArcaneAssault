@@ -47,27 +47,49 @@ if(compHealth > 0){
 			}
 		}
 	
-	
+		if(canAttack){
+			if(lastX == x and lastY == y){
+				sprite_index = idleSprite;
+			}else{
+				sprite_index = walkSprite;
+			}
+		}
 	
 		//attack if close enough
 		if(canAttack and scr_checkBox(x,y-30,x+(image_xscale*240),y+30,obj_enemy)){
 			//can attack, so attack
-			attackObj=instance_create_layer(x,y,"Instances",obj_compAttack);
+			
 			canAttack = false;
-			alarm[0] = 1.5 * room_speed;
-	
+			//alarm[0] = 1.5 * room_speed;
+			sprite_index = attackSprite;
 		
 		
+		}
+		if(sprite_index == attackSprite and image_index >= attackStartFrame and !instance_exists(attackObj)){
+			
+			attackObj=instance_create_layer(x,y,"Instances",obj_compAttack);
 		}
 	
 		if(instance_exists(attackObj)){
 				attackObj.x = x;
 				attackObj.y = y;
 				attackObj.image_xscale = image_xscale;
+				if(image_index >=attackEndFrame){
+					instance_destroy(attackObj);
+				}
 		}
+		
+		
+		
+		
+		lastX = x
+		lastY = y
 	
 	}
+	
 }
 else{
+	//kill self
 	event_user(1);
+	
 }

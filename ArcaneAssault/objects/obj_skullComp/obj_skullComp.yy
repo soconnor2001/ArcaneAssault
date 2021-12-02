@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_skull",
-    "path": "sprites/spr_skull/spr_skull.yy",
+    "name": "spr_skullAwake",
+    "path": "sprites/spr_skullAwake/spr_skullAwake.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,9 +26,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"sleepingSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skull","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"awakeSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullComp","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"awakeSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullAwake","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"companionType","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"Skull","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"walkSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullWalk","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"idleSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attackSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"deathSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skullDeath","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attackStartFrame","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attackEndFrame","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"12","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Objects",

@@ -5,4 +5,8 @@ canAttack = true;
 attackObj = noone;
 
 compHealth = maxHealth;
-sprite_index = sleepingSprite;
+sprite_index = awakeSprite;
+image_speed = 0;
+
+lastX = x
+lastY = y

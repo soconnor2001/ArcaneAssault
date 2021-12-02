@@ -9,4 +9,5 @@ if(instance_exists(obj_player)){
 		show_debug_message("list index: "+string(ds_list_find_index(currentCompanions,other.selfIndex)));
 	}
 }
-instance_destroy();
+//instance_destroy();
+sprite_index = deathSprite;

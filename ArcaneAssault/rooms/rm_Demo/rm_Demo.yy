@@ -15,7 +15,6 @@
   "layers": [
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":608.0,"y":832.0,"resourceVersion":"1.0","name":"inst_5414D5B4","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1504.0,"y":832.0,"resourceVersion":"1.0","name":"inst_71E85BE","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":4064.0,"y":736.0,"resourceVersion":"1.0","name":"inst_33D15BB3","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5344.0,"y":832.0,"resourceVersion":"1.0","name":"inst_4C944209","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_GUI","path":"objects/obj_GUI/obj_GUI.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":128.0,"resourceVersion":"1.0","name":"inst_F870D1F","tags":[],"resourceType":"GMRInstance",},
@@ -42,7 +41,6 @@
   "instanceCreationOrder": [
     {"name":"inst_5414D5B4","path":"rooms/rm_Demo/rm_Demo.yy",},
     {"name":"inst_57D7E284","path":"rooms/rm_Demo/rm_Demo.yy",},
-    {"name":"inst_71E85BE","path":"rooms/rm_Demo/rm_Demo.yy",},
     {"name":"inst_33D15BB3","path":"rooms/rm_Demo/rm_Demo.yy",},
     {"name":"inst_4C944209","path":"rooms/rm_Demo/rm_Demo.yy",},
     {"name":"inst_F870D1F","path":"rooms/rm_Demo/rm_Demo.yy",},

@@ -21,8 +21,9 @@ if(mana >= manaSummonCost){
 		}
 		ds_list_add(currentCompanions,newCompanion);
 		mana -= manaSummonCost; 
-	
+		canAttack = false;
+		sprite_index = spr_playerMagicAttack;
 	}else{
-		show_debug_message("no companion");
+		//show_debug_message("no companion");
 	}
 }

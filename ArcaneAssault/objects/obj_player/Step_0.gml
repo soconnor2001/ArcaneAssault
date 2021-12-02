@@ -30,7 +30,14 @@ if(playerHealth > 0){
 
 	if(deltaX == 0 and deltaY == 0){
 		//idle
+		if(canAttack){
+			
+			sprite_index = spr_playerIdle;
+		}
 	}else{
+		if(canAttack){
+			sprite_index = spr_playerWalk;
+		}
 		if(deltaX > 0){
 			//face right
 			image_xscale = 1;
@@ -46,20 +53,31 @@ if(playerHealth > 0){
 
 	//attack
 	if(keyboard_check(ord("C")) and canAttack){
-		//do attack
-		attackObj=instance_create_layer(x,y,"Instances",obj_playerAttack);
+		//do attack animation
+		//attackObj=instance_create_layer(x,y,"Instances",obj_playerAttack);
 		canAttack = false;
-		alarm[0] = .5 * room_speed;
+		//alarm[0] = .5 * room_speed;
+		sprite_index = spr_playerMeleeAttack;
+		image_index = 0;
 	
 	}
+	if(	sprite_index == spr_playerMeleeAttack and (30 <= image_index and image_index <43) and !instance_exists(attackObj)){
+		//start doing damage
+		attackObj=instance_create_layer(x,y,"Instances",obj_playerAttack);
+		show_debug_message("made attack");
+	}
+	show_debug_message(image_index);
 	if(instance_exists(attackObj)){
 		attackObj.x = x;
 		attackObj.y = y;
 		attackObj.image_xscale = image_xscale;
+		if(image_index > 43){
+			instance_destroy(attackObj);
+		}
 	}
 
 	//summon companion
-	if(keyboard_check_pressed(ord("Z"))){
+	if(keyboard_check_pressed(ord("Z")) and canAttack){
 		event_user(0);
 	
 	}

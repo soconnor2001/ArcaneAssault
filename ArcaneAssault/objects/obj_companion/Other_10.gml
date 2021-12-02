@@ -2,6 +2,6 @@
 // You can write your code in this editor
 
 
-awake = true;
 
-sprite_index = awakeSprite
+
+image_speed = 1;
