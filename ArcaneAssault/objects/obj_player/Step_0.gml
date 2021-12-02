@@ -64,8 +64,8 @@ if(playerHealth > 0){
 	
 	}
 	
-	//check if all enemies dead
-	if(!instance_exists(obj_enemy)){
+	//check if all enemies dead and offscreen
+	if(!instance_exists(obj_enemy) and scr_isOutsideScreen(id)){
 		room_goto_next();
 	}
 

@@ -2,7 +2,7 @@
 function scr_VerticalMove(amount, obj){
 	
 	
-	floorLowerBorder = 700;
+	floorLowerBorder = global.lowerBorder;
 	floorUpperBorder = room_height;
 	
 	newY = obj.y + global.projectionScalar * amount
