@@ -6,6 +6,7 @@ if(instance_exists(obj_playerStart)){
 	startObj = instance_find(obj_playerStart,0);
 	x=startObj.x;
 	y=startObj.y;
+	currentCompanions = ds_list_create();
 }
 
 if(room_get_name(room)=="rm_Win" or room_get_name(room)=="rm_Loose" or room_get_name(room)=="rm_MainMenu"){

@@ -30,7 +30,11 @@ with(obj_enemy){
 		
 		eHealthH = 15
 		eHealthW = abs(sprite_width/2);
-		draw_healthbar(x-camera_get_view_x(view_camera[0])-eHealthW/2,y-sprite_height-eHealthH - 5,x-camera_get_view_x(view_camera[0])+eHealthW/2,y-sprite_height-5,(id.enemyHealth/id.maxHealth)*100,
+		draw_healthbar((x-camera_get_view_x(view_camera[0])-eHealthW/2)*(view_wport[0]/camera_get_view_width(view_camera[0])),
+		((y-camera_get_view_y(view_camera[0]))-sprite_height-eHealthH - 5)*(view_hport[0]/camera_get_view_height(view_camera[0])),
+		(x-camera_get_view_x(view_camera[0])+eHealthW/2)*(view_wport[0]/camera_get_view_width(view_camera[0])),
+		((y-camera_get_view_y(view_camera[0]))-sprite_height-5)*(view_hport[0]/camera_get_view_height(view_camera[0])),
+		(id.enemyHealth/id.maxHealth)*100,
 			c_black,c_red,c_green,0,true,true);
 		
 		
@@ -42,7 +46,11 @@ with(obj_companion){
 	if(awake){
 		cHealthH = 15
 		cHealthW = abs(sprite_width/2);
-		draw_healthbar(x-camera_get_view_x(view_camera[0])-cHealthW/2,y-sprite_height-cHealthH - 5,x-camera_get_view_x(view_camera[0])+cHealthW/2,y-sprite_height-5,(id.compHealth/id.maxHealth)*100,
+		draw_healthbar((x-camera_get_view_x(view_camera[0])-cHealthW/2)*(view_wport[0]/camera_get_view_width(view_camera[0])),
+		((y-camera_get_view_y(view_camera[0]))-sprite_height-cHealthH - 5)*(view_hport[0]/camera_get_view_height(view_camera[0])),
+		(x-camera_get_view_x(view_camera[0])+cHealthW/2)*(view_wport[0]/camera_get_view_width(view_camera[0])),
+		((y-camera_get_view_y(view_camera[0]))-sprite_height-5)*(view_hport[0]/camera_get_view_height(view_camera[0])),
+		(id.compHealth/id.maxHealth)*100,
 			c_black,c_red,c_green,0,true,true);
 	}
 }
