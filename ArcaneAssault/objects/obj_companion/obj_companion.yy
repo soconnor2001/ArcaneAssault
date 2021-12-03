@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_tempBroom",
-    "path": "sprites/spr_tempBroom/spr_tempBroom.yy",
+    "name": "spr_broomAwake",
+    "path": "sprites/spr_broomAwake/spr_broomAwake.yy",
   },
   "solid": false,
   "visible": true,
