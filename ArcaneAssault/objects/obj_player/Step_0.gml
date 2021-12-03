@@ -75,6 +75,16 @@ if(playerHealth > 0){
 			instance_destroy(attackObj);
 		}
 	}
+	
+	//do fireball
+	if(keyboard_check(ord("X")) and canAttack and mana >= 2){
+		canAttack = false;
+		sprite_index = spr_playerMagicAttack;
+		image_index = 0;
+		instance_create_layer(x,y,"Instances",obj_fireball);
+		mana -= 2;
+		
+	}
 
 	//summon companion
 	if(keyboard_check_pressed(ord("Z")) and canAttack){

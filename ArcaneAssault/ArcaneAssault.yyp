@@ -25,6 +25,7 @@
     {"id":{"name":"scr_nextRoomButton","path":"scripts/scr_nextRoomButton/scr_nextRoomButton.yy",},"order":6,},
     {"id":{"name":"spr_skullIdle","path":"sprites/spr_skullIdle/spr_skullIdle.yy",},"order":2,},
     {"id":{"name":"obj_cheats","path":"objects/obj_cheats/obj_cheats.yy",},"order":17,},
+    {"id":{"name":"obj_fireball","path":"objects/obj_fireball/obj_fireball.yy",},"order":19,},
     {"id":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"order":9,},
     {"id":{"name":"spr_collisionCheck","path":"sprites/spr_collisionCheck/spr_collisionCheck.yy",},"order":2,},
     {"id":{"name":"spr_broomAwake","path":"sprites/spr_broomAwake/spr_broomAwake.yy",},"order":2,},
