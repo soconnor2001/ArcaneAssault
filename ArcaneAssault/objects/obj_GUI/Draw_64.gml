@@ -4,7 +4,7 @@
 
 //player health
 
-pHealthW = view_get_wport(0)*(3/8.0) - screenMargins;
+pHealthW = view_get_wport(view_camera[0])*(3/8.0) - screenMargins;
 pHealthH = 2*screenMargins;
 
 draw_healthbar(screenMargins,screenMargins,pHealthW+screenMargins,pHealthH+screenMargins,(obj_player.playerHealth/obj_player.maxHealth)*100,
@@ -13,10 +13,10 @@ draw_healthbar(screenMargins,screenMargins,pHealthW+screenMargins,pHealthH+scree
 	
 //player Mana
 
-pManaW = view_get_wport(0)*(3/8.0) + screenMargins;
+pManaW = view_get_wport(view_camera[0])*(3/8.0) + screenMargins;
 pManaH = pHealthH;
 
-draw_healthbar(view_get_wport(0)-pManaW-screenMargins,screenMargins,view_get_wport(0)-screenMargins,pManaH+screenMargins,(obj_player.mana/obj_player.maxMana)*100,
+draw_healthbar(view_get_wport(view_camera[0])-pManaW-screenMargins,screenMargins,view_get_wport(view_camera[0])-screenMargins,pManaH+screenMargins,(obj_player.mana/obj_player.maxMana)*100,
 	c_black,7637829, 16776960, 1,true,true); 
 	//7637829 = light cyan
 	// 16776960 = dark cyan
@@ -55,3 +55,13 @@ with(obj_companion){
 	}
 }
 
+
+
+//draw boss healthbar if boss on screen
+
+
+bHealthW = view_get_wport(view_camera[0])*-2 * screenMargins;
+bHealthH = 100;
+
+draw_healthbar(screenMargins, view_get_hport(view_camera[0])-screenMargins,bHealthW+screenMargins,bHealthH+screenMargins,(obj_player.playerHealth/obj_player.maxHealth)*100,
+	c_black,c_red,c_green,0,true,true);

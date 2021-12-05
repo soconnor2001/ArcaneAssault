@@ -6,4 +6,4 @@ global.projectionScalar = .35;
 global.lowerBorder = 2880;
 
 //to test random elements by changing random seed
-randomize();
+//randomize();
