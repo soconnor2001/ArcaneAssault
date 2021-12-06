@@ -15,25 +15,30 @@ if(enemyHealth > 0){
 		
 		
 		//first, check for nearby companions
-		
-		//this is the farthest an enemy will go to attack a companion
-		shortestDistance = 360;
-		closestComp = noone;
-		for(i = 0; i < ds_list_size(playerObj.currentCompanions); i++){
-			comp = ds_list_find_value(playerObj.currentCompanions,i);
-			if(point_distance(x,y,comp.x,comp.y) < shortestDistance){
-				shortestDistance = point_distance(x,y,comp.x,comp.y);
-				closestComp = comp;
-			}
-		}
-		if(closestComp != noone){
+		//if(ds_exists(playerObj.currentCompanions,ds_type_list)){
 			
-			//go after companion
-			scr_moveToward(id,closestComp,enemySpeed);
-		}else{
+			//this is the farthest an enemy will go to attack a companion
+			shortestDistance = 360;
+			closestComp = noone;
+			for(i = 0; i < ds_list_size(playerObj.currentCompanions); i++){
+				comp = ds_list_find_value(playerObj.currentCompanions,i);
+				if(point_distance(x,y,comp.x,comp.y) < shortestDistance){
+					shortestDistance = point_distance(x,y,comp.x,comp.y);
+					closestComp = comp;
+				}
+			}
+			if(closestComp != noone){
+			
+				//go after companion
+				scr_moveToward(id,closestComp,enemySpeed);
+			}else{
+				//go after player
+				scr_moveToward(id,playerObj,enemySpeed);
+			}
+		//}else{
 			//go after player
-			scr_moveToward(id,playerObj,enemySpeed);
-		}
+			//scr_moveToward(id,playerObj,enemySpeed);
+		//}
 	
 	}
 

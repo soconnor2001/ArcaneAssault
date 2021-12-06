@@ -3,6 +3,8 @@
 
 if(!awake){
 	awake = true;
+	persistent = true;
+
 }else if(sprite_index == attackSprite){
 	canAttack = true;
 }else if(compHealth <= 0){

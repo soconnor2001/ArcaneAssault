@@ -8,3 +8,5 @@ alarm[0] = .25 * room_speed; //attack last for quarter a second
 //change later when have final animation
 
 
+ds_list_destroy(attacked);
+attacked = false;

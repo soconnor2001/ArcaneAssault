@@ -13,5 +13,5 @@ canAttack = true;
 attackCooldown = 5
 
 
-
+bossHealth = maxHealth
 

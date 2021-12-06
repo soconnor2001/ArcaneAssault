@@ -13,7 +13,7 @@ if(mana >= manaSummonCost){
 				ds_list_add(possibleCompanions,possibleCompanion);
 			}
 	}
-	show_debug_message(ds_list_size(possibleCompanions))
+	//show_debug_message(ds_list_size(possibleCompanions))
 	if(ds_list_size(possibleCompanions)>0){	
 		newCompanion = ds_list_find_value(possibleCompanions,irandom_range(0,ds_list_size(possibleCompanions)-1));
 		with(newCompanion){

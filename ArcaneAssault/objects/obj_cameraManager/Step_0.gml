@@ -7,8 +7,8 @@ if(instance_exists(obj_player)){
 	
 	with(playerObj){
 		other.focus = instance_place(x,y,obj_camFocus);
-		show_debug_message("camfocus: "+string(other.focus));
-		show_debug_message("Real target: "+string(camera_get_view_target(view_camera[0]))+" "+string(id));
+		//show_debug_message("camfocus: "+string(other.focus));
+		//show_debug_message("Real target: "+string(camera_get_view_target(view_camera[0]))+" "+string(id));
 	}
 	if(focus != noone){
 		//move cam to watch camFocus

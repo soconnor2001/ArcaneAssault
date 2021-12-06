@@ -64,9 +64,9 @@ if(playerHealth > 0){
 	if(	sprite_index == spr_playerMeleeAttack and (30 <= image_index and image_index <43) and !instance_exists(attackObj)){
 		//start doing damage
 		attackObj=instance_create_layer(x,y,"Instances",obj_playerAttack);
-		show_debug_message("made attack");
+		//show_debug_message("made attack");
 	}
-	show_debug_message(image_index);
+	//show_debug_message(image_index);
 	if(instance_exists(attackObj)){
 		attackObj.x = x;
 		attackObj.y = y;

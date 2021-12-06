@@ -13,8 +13,9 @@ if(!scr_isOutsideScreen(id)){
 	
 	
 	
-	if(currentSkeletons <= 1 and canAttack){
+	if(ds_list_size(currentSkeletons)<=1 and canAttack){
 		
+		//do attack
 		event_user(0);
 	}
 	

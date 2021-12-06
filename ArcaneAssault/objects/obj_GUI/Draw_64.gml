@@ -60,8 +60,14 @@ with(obj_companion){
 //draw boss healthbar if boss on screen
 
 
-bHealthW = view_get_wport(view_camera[0])*-2 * screenMargins;
-bHealthH = 100;
 
-draw_healthbar(screenMargins, view_get_hport(view_camera[0])-screenMargins,bHealthW+screenMargins,bHealthH+screenMargins,(obj_player.playerHealth/obj_player.maxHealth)*100,
-	c_black,c_red,c_green,0,true,true);
+	
+if(instance_exists(obj_lichKing) and !scr_isOutsideScreen(instance_find(obj_lichKing,0))){
+	
+	bHealthW = view_get_wport(view_camera[0])-2 * screenMargins;
+	bHealthH = 50;
+
+	draw_healthbar(screenMargins, view_get_hport(view_camera[0])-bHealthH-screenMargins,bHealthW+screenMargins,view_get_hport(view_camera[0])-screenMargins,(obj_lichKing.bossHealth/obj_lichKing.maxHealth)*100,
+		c_black,c_red,c_green,0,true,true);
+	
+}

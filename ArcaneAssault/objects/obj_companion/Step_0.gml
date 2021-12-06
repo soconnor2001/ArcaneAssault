@@ -38,7 +38,7 @@ if(compHealth > 0){
 			if(instance_exists(obj_player)){
 				playerObj = instance_find(obj_player,0);
 				selfIndex = ds_list_find_index(playerObj.currentCompanions,id);
-				show_debug_message(selfIndex);
+				//show_debug_message(selfIndex);
 				if(selfIndex <= 0){
 					scr_moveToward(id,obj_player,compSpeed);
 				}else{

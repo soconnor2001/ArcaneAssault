@@ -10,3 +10,6 @@ image_speed = 0;
 
 lastX = x
 lastY = y
+
+
+
