@@ -4,11 +4,11 @@
 
 
 //randomly pick attack
-attackNum = irandom_range(2,2);
+attackNum = irandom_range(0,2);
 newSkeletons = noone; 
 switch(attackNum){
 	case 0:
-		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tttt",1000);
+		newSkeletons = scr_bossSpawn(id,obj_skeleton,"ttt",1000);
 		break;
 	case 1:
 		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tft",300,45,1500);
@@ -27,9 +27,10 @@ if(newSkeletons != noone){
 	for(i = 0; i < ds_list_size(newSkeletons);i++){
 		ds_list_add(currentSkeletons,ds_list_find_value(newSkeletons,i));
 	}
-		
+}
+
 	//start attackCooldown
 	canAttack = false;
 	alarm[0] = attackCooldown * room_speed
 			
-}
+

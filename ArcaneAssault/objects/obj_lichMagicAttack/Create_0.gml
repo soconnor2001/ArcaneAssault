@@ -8,3 +8,5 @@ attacking = false
 
 
 hitObjs = ds_list_create();
+
+depth = -y

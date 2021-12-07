@@ -11,6 +11,7 @@ canAttack = true;
 
 //minimum time between attacks in seconds
 attackCooldown = 5
+;
 
 
 bossHealth = maxHealth
