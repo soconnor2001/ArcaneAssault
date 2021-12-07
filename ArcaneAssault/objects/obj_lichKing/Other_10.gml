@@ -8,10 +8,10 @@ attackNum = irandom_range(0,1);
 newSkeletons = noone; 
 switch(attackNum){
 	case 0:
-		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tttt",300);
+		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tttt",1000);
 		break;
 	case 1:
-		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tft",300,45,500);
+		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tft",300,45,1500);
 		break;
 }
 
