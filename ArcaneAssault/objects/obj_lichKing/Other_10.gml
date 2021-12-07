@@ -4,7 +4,7 @@
 
 
 //randomly pick attack
-attackNum = irandom_range(0,1);
+attackNum = irandom_range(2,2);
 newSkeletons = noone; 
 switch(attackNum){
 	case 0:
@@ -13,10 +13,13 @@ switch(attackNum){
 	case 1:
 		newSkeletons = scr_bossSpawn(id,obj_skeleton,"tft",300,45,1500);
 		break;
+	default:
+		instance_create_layer(12500,2700,"Instances",obj_lichMagicAttack);
+		break;
 }
 
 
-//if did attack
+//if did skeleton attack
 if(newSkeletons != noone){
 			
 			
