@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Obj_WallCollision",
+  "name": "obj_WallCollision",
   "tags": [],
   "resourceType": "GMObject",
 }

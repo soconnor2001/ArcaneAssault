@@ -7,9 +7,15 @@ function scr_VerticalMove(amount, obj){
 	
 	onBossRoomFloor = place_meeting(obj.x,obj.y,obj_bossFloor);
 	
-	newY = obj.y + global.projectionScalar * amount
+	newY = obj.y + global.projectionScalar * amount;
+	
+	//only move if player stays in floor space
 	if((onBossRoomFloor or floorLowerBorder <= newY) and newY <= floorUpperBorder){
-		obj.y = newY;
+		
+		//can only move if move not make obj collide w/ wallCollision
+		if(!instance_place(obj.x,newY,obj_WallCollision)){
+			obj.y = newY;
+		}
 	}
 	
 	

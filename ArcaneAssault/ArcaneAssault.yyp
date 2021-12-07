@@ -18,7 +18,7 @@
     {"id":{"name":"obj_collisionCheck","path":"objects/obj_collisionCheck/obj_collisionCheck.yy",},"order":1,},
     {"id":{"name":"spr_lichMagicAttack","path":"sprites/spr_lichMagicAttack/spr_lichMagicAttack.yy",},"order":23,},
     {"id":{"name":"spr_attackVisual","path":"sprites/spr_attackVisual/spr_attackVisual.yy",},"order":5,},
-    {"id":{"name":"Obj_WallCollision","path":"objects/Obj_WallCollision/Obj_WallCollision.yy",},"order":23,},
+    {"id":{"name":"obj_WallCollision","path":"objects/obj_WallCollision/obj_WallCollision.yy",},"order":23,},
     {"id":{"name":"obj_lichKing","path":"objects/obj_lichKing/obj_lichKing.yy",},"order":21,},
     {"id":{"name":"spr_playerMagicAttack","path":"sprites/spr_playerMagicAttack/spr_playerMagicAttack.yy",},"order":3,},
     {"id":{"name":"obj_bones","path":"objects/obj_bones/obj_bones.yy",},"order":12,},
