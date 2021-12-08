@@ -78,4 +78,16 @@ if(instance_exists(obj_player)){
 			camera_set_view_target(view_camera[0],obj_player);
 		}
 	}
+	
+	
+	if(camera_get_view_target(view_camera[0])){
+		//if following player
+		
+		if(camera_get_view_border_x(view_camera[0])!=lastCamX or
+			camera_get_view_border_y(view_camera[0]) != lastCamY){
+				newX = layer_get_x("Background")+global.BGscalar*(lastCamX - camera_get_view_border_x(view_camera[0]));
+				layer_x("Background",newX);
+			}	
+	}
 }
+
