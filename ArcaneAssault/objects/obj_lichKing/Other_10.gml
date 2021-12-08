@@ -31,6 +31,6 @@ if(newSkeletons != noone){
 
 	//start attackCooldown
 	canAttack = false;
-	alarm[0] = attackCooldown * room_speed
+	alarm[0] = attackCooldown * room_speed;
 			
 

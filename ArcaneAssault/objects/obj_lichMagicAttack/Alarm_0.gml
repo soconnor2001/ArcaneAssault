@@ -9,4 +9,4 @@ attacking = true;
 
 //start timer to kill self
 alarm[1] = attackSeconds*room_speed;
-show_debug_message("");
+//show_debug_message("");

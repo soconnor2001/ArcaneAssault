@@ -10,9 +10,9 @@ currentSkeletons = ds_list_create();
 canAttack = true;
 
 //minimum time between attacks in seconds
-attackCooldown = 5
-;
+attackCooldown = 5;
 
 
-bossHealth = maxHealth
+bossHealth = maxHealth;
 
+depth = -y;

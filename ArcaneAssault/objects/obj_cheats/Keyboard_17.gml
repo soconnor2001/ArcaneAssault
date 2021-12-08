@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description cheats
 // You can write your code in this editor
 
 
@@ -13,6 +13,16 @@ if(keyboard_check_pressed(ord("H"))){
 }
 
 if(keyboard_check_pressed(ord("M"))){
-	//full health
+	//full mana
 	obj_player.mana=obj_player.maxMana;
+}
+
+if(keyboard_check_pressed(ord("K"))){
+	//Kill onscreenEnemies
+	//obj_player.mana=obj_player.maxMana;
+	with(obj_enemy){
+		if(!scr_isOutsideScreen(id)){
+			instance_destroy();
+		}
+	}
 }

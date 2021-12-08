@@ -26,7 +26,15 @@ if(compHealth > 0){
 				}
 			}
 		}
-	
+		
+		//if no enemies, figh boss if there
+		if(nearestEnemy == noone and instance_exists(obj_lichKing)){
+			enemyToCheck = instance_find(obj_lichKing,0);
+		
+			if(!scr_isOutsideScreen(enemyToCheck)){
+				nearestEnemy = enemyToCheck;
+			}
+		}
 
 
 		if(nearestEnemy != noone){

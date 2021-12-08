@@ -101,10 +101,10 @@
     {"roomId":{"name":"rm_MainMenu","path":"rooms/rm_MainMenu/rm_MainMenu.yy",},},
     {"roomId":{"name":"rm_Room1","path":"rooms/rm_Room1/rm_Room1.yy",},},
     {"roomId":{"name":"rm_Room2","path":"rooms/rm_Room2/rm_Room2.yy",},},
-    {"roomId":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
-    {"roomId":{"name":"rm_Demo2","path":"rooms/rm_Demo2/rm_Demo2.yy",},},
     {"roomId":{"name":"rm_Win","path":"rooms/rm_Win/rm_Win.yy",},},
     {"roomId":{"name":"rm_Loose","path":"rooms/rm_Loose/rm_Loose.yy",},},
+    {"roomId":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
+    {"roomId":{"name":"rm_Demo2","path":"rooms/rm_Demo2/rm_Demo2.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
