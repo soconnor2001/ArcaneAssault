@@ -15,7 +15,7 @@ if(enemyHealth > 0){
 		
 		
 		//first, check for nearby companions
-		//if(ds_exists(playerObj.currentCompanions,ds_type_list)){
+		if(ds_exists(playerObj.currentCompanions,ds_type_list)){
 			
 			//this is the farthest an enemy will go to attack a companion
 			shortestDistance = 360;
@@ -35,10 +35,10 @@ if(enemyHealth > 0){
 				//go after player
 				scr_moveToward(id,playerObj,enemySpeed);
 			}
-		//}else{
+		}else{
 			//go after player
-			//scr_moveToward(id,playerObj,enemySpeed);
-		//}
+			scr_moveToward(id,playerObj,enemySpeed);
+		}
 	
 	}
 

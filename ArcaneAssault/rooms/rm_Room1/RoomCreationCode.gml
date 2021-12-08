@@ -7,7 +7,7 @@ global.lowerBorder = 700;
 
 
 //for parallaxing mvnt
-global.BGscalar = -.04;
+global.BGscalar = -.51;
 
 
 //to test random elements by changing random seed

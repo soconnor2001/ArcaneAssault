@@ -11,3 +11,6 @@ playerHealth = maxHealth;
 mana = 0;
 
 manaSummonCost = 5;
+
+deltaX=0;
+deltaY=0;

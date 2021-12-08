@@ -7,8 +7,8 @@ if(playerHealth > 0){
 
 
 	//movement
-	deltaX=0
-	deltaY=0
+	deltaX=0;
+	deltaY=0;
 
 	if(keyboard_check(vk_up)){
 		//move up

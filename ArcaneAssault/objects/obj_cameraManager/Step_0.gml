@@ -83,11 +83,47 @@ if(instance_exists(obj_player)){
 	if(camera_get_view_target(view_camera[0])){
 		//if following player
 		
-		if(camera_get_view_border_x(view_camera[0])!=lastCamX or
-			camera_get_view_border_y(view_camera[0]) != lastCamY){
-				newX = layer_get_x("Background")+global.BGscalar*(lastCamX - camera_get_view_border_x(view_camera[0]));
-				layer_x("Background",newX);
-			}	
+		
+		//parallaxing
+		if(camera_get_view_x(view_camera[0])!=lastCamX or
+			camera_get_view_y(view_camera[0]) != lastCamY){
+				
+				
+				bgId = layer_get_id("Background");
+				// set BG x
+				newX = layer_get_x(bgId)+global.BGscalar*(lastCamX - camera_get_view_x(view_camera[0]));
+				//layer_x(bgId,lerp(0,camera_get_view_x(view_camera[0]),.5));
+				layer_x(bgId,newX);
+				
+				
+				// set BG Y
+				newY = layer_get_y(bgId)+global.BGscalar*(lastCamY - camera_get_view_y(view_camera[0]));
+				layer_y(bgId,newY);
+				
+				//show_debug_message("move bg "+string(newX)+" "+string(newY));
+				//show_debug_message("layer x,y now: "+string(layer_get_x(bgId))+" "+ string(layer_get_y(bgId))+" "+string(bgId));
+				
+				lastCamX = camera_get_view_x(view_camera[0]);
+				lastCamY = camera_get_view_y(view_camera[0]);
+		}	
+		
+		//asymetric vertical border
+		if(playerObj.y-camera_get_view_y(view_camera[0]) >= bottomCamBorder and playerObj.deltaY>0){
+			//if character too low on screen, let cam follow
+			//camera_set_view_border(view_camera[0],camera_get_view_border_x(view_camera[0]),camera_get_view_height(view_camera[0])-bottomCamBorder);
+			camera_set_view_pos(view_camera[0],camera_get_view_x(view_camera[0]),clamp(playerObj.y-(camera_get_view_height(view_camera[0])-bottomCamBorder),0,room_height-camera_get_view_height(view_camera[0])));
+		}
+		else if (playerObj.y-camera_get_view_y(view_camera[0]) < topCamBorder and playerObj.deltaY<0){
+			//if character too high on screen, let cam follow
+			//camera_set_view_border(view_camera[0],camera_get_view_border_x(view_camera[0]),min(playerObj.y-camera_get_view_y(view_camera[0])-1,topCamBorder));
+			camera_set_view_pos(view_camera[0],camera_get_view_x(view_camera[0]),clamp(playerObj.y-topCamBorder,0,room_height-camera_get_view_height(view_camera[0])));
+		
+		}
+		else{
+			//cam don't vertically follow
+			//camera_set_view_border(view_camera[0],camera_get_view_border_x(view_camera[0]),10000000000000);
+		}
+		show_debug_message("borders: " + string(camera_get_view_border_y(view_camera[0])));
 	}
 }
 
