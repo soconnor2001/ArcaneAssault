@@ -111,7 +111,7 @@ if(instance_exists(obj_player)){
 		if(playerObj.y-camera_get_view_y(view_camera[0]) >= bottomCamBorder and playerObj.deltaY>0){
 			//if character too low on screen, let cam follow
 			//camera_set_view_border(view_camera[0],camera_get_view_border_x(view_camera[0]),camera_get_view_height(view_camera[0])-bottomCamBorder);
-			camera_set_view_pos(view_camera[0],camera_get_view_x(view_camera[0]),clamp(playerObj.y-(camera_get_view_height(view_camera[0])-bottomCamBorder),0,room_height-camera_get_view_height(view_camera[0])));
+			camera_set_view_pos(view_camera[0],camera_get_view_x(view_camera[0]),clamp(playerObj.y-bottomCamBorder,0,room_height-camera_get_view_height(view_camera[0])));
 		}
 		else if (playerObj.y-camera_get_view_y(view_camera[0]) < topCamBorder and playerObj.deltaY<0){
 			//if character too high on screen, let cam follow
