@@ -6,5 +6,7 @@
 
 temp = instance_create_layer(x,y,"Instances",obj_skullComp);
 temp.image_xscale = image_xscale;
-instance_destroy();
+
+event_inherited();
+
 

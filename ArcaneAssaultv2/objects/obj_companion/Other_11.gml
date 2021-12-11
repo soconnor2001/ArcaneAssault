@@ -14,3 +14,4 @@ if(instance_exists(obj_player)){
 }
 //instance_destroy();
 sprite_index = deathSprite;
+audio_stop_sound(snd_walking);
