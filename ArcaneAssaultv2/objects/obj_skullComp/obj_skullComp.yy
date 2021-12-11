@@ -34,6 +34,8 @@
     {"propertyId":{"name":"deathSprite","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"spr_skeleton_death","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"attackStartFrame","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"attackEndFrame","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"12","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"sndWalk","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"snd_skeletonWalk","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"sndAttack","path":"objects/obj_companion/obj_companion.yy",},"objectId":{"name":"obj_companion","path":"objects/obj_companion/obj_companion.yy",},"value":"snd_skeleton_Growl","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Objects",

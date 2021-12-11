@@ -85,6 +85,9 @@ if(enemyHealth > 0){
 	if(	sprite_index == attackSprite and (attackStartFrame <= image_index and image_index < attackEndFrame) and !instance_exists(attackObj)){
 		//start doing damage
 		attackObj=instance_create_layer(x,y,"Instances",obj_enemyAttack);
+		if(!audio_is_playing(sndAttack)){
+			audio_play_sound_at(sndAttack,x,y,0,50,100,1,false,0);
+		}
 		//show_debug_message("made attack");
 	}
 	
@@ -101,13 +104,21 @@ if(enemyHealth > 0){
 	if(canAttack){
 			if(xprevious == x and yprevious == y){
 				sprite_index = idleSprite;
+				if(audio_is_playing(snd_walking)){
+					audio_stop_sound(snd_walking);
+				}
 			}else{
 				sprite_index = walkSprite;
+				if(!audio_is_playing(snd_walking)){
+					snd_walking = audio_play_sound_at(sndWalk,x,y,0,50,100,1,true,0);
+				}
+			
 			}
-	}
 	
+	}
 
 }
 else{
-	event_user(0);
+	sprite_index = deathSprite;
+	//event_user(0);
 }

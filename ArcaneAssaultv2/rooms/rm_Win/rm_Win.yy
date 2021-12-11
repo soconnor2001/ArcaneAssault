@@ -17,7 +17,12 @@
         {"properties":[
             {"propertyId":{"name":"buttonScr","path":"objects/obj_menuButton/obj_menuButton.yy",},"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"value":"scr_returnButton","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"buttonText","path":"objects/obj_menuButton/obj_menuButton.yy",},"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"value":"Return to Menu","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.5333333,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":768.0,"y":864.0,"resourceVersion":"1.0","name":"inst_3295A12B","tags":[],"resourceType":"GMRInstance",},
+          ],"isDnd":false,"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.9111111,"scaleY":1.5333333,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":320.0,"y":864.0,"resourceVersion":"1.0","name":"inst_3295A12B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"buttonScr","path":"objects/obj_menuButton/obj_menuButton.yy",},"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"value":"scr_quitButton","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+            {"propertyId":{"name":"buttonText","path":"objects/obj_menuButton/obj_menuButton.yy",},"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"value":"quit","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"obj_menuButton","path":"objects/obj_menuButton/obj_menuButton.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.08888888,"scaleY":1.5333333,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1216.0,"y":864.0,"resourceVersion":"1.0","name":"inst_6D866967","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":64.0,"y":32.0,"resourceVersion":"1.0","name":"inst_67FAF331","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"spriteId":{"name":"spr_winScreen","path":"sprites/spr_winScreen/spr_winScreen.yy",},"colour":4294967295,"x":0,"y":0,"htiled":false,"vtiled":false,"hspeed":0.0,"vspeed":0.0,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Background","tags":[],"resourceType":"GMRBackgroundLayer",},
   ],
@@ -26,6 +31,8 @@
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_3295A12B","path":"rooms/rm_Win/rm_Win.yy",},
+    {"name":"inst_6D866967","path":"rooms/rm_Win/rm_Win.yy",},
+    {"name":"inst_67FAF331","path":"rooms/rm_Win/rm_Win.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -33,11 +33,16 @@ if(playerHealth > 0){
 		if(canAttack){
 			
 			sprite_index = spr_playerIdle;
+			
 		}
+		
 	}else{
 		if(canAttack){
 			sprite_index = spr_playerWalk;
+			
 		}
+		
+		
 		if(deltaX > 0){
 			//face right
 			image_xscale = 1;
@@ -96,6 +101,13 @@ if(playerHealth > 0){
 	if(!instance_exists(obj_enemy) and scr_isOutsideScreen(id)){
 		room_goto_next();
 	}
+	
+	//play snd_walk if walking
+	if(sprite_index == spr_playerWalk and !audio_is_playing(snd_wizardWalk)){
+		audio_play_sound(snd_wizardWalk,0,true);
+	}else if(sprite_index != spr_playerWalk and audio_is_playing(snd_wizardWalk)){
+		audio_stop_sound(snd_wizardWalk);
+	}
 
 }
 else{
@@ -103,3 +115,4 @@ else{
 }
 
 	
+audio_listener_position(x,y,0);

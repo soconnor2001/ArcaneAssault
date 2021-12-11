@@ -24,6 +24,7 @@ if(mana >= manaSummonCost){
 		mana -= manaSummonCost; 
 		canAttack = false;
 		sprite_index = spr_playerMagicAttack;
+		audio_play_sound(snd_wizardSpell,1,false);
 	}else{
 		//show_debug_message("no companion");
 	}

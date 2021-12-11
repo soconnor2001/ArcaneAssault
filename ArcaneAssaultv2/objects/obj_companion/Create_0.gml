@@ -12,6 +12,6 @@ lastX = x
 lastY = y
 
 depth = -y;
-
+snd_walking = noone;
 
 

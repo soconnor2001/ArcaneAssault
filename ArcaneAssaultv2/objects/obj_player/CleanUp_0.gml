@@ -3,3 +3,5 @@
 
 
 ds_list_destroy(currentCompanions);
+
+audio_stop_all();

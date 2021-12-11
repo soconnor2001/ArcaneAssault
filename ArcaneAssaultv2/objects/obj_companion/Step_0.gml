@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(compHealth > 0){
+if(compHealth > 0 and sprite_index != deathSprite){
 	
 	if(awake){
 	
@@ -61,13 +61,19 @@ if(compHealth > 0){
 		if(canAttack){
 			if(lastX == x and lastY == y){
 				sprite_index = idleSprite;
+				if(audio_is_playing(snd_walking)){
+					audio_stop_sound(snd_walking);
+				}
 			}else{
 				sprite_index = walkSprite;
+				if(!audio_is_playing(snd_walking)){
+					snd_walking = audio_play_sound_at(sndWalk,other.x,other.y,0,50,100,1,false,0);
+				}
 			}
 		}
 	
 		//attack if close enough
-		if(canAttack and scr_checkBox(x,y-30,x+(image_xscale*240),y+30,obj_enemy)){
+		if(canAttack and (scr_checkBox(x,y-30,x+(image_xscale*240),y+30,obj_enemy) or scr_checkBox(x,y-30,x+(image_xscale*240),y+30,obj_lichKing))){
 			//can attack, so attack
 			
 			canAttack = false;
@@ -79,6 +85,10 @@ if(compHealth > 0){
 		if(sprite_index == attackSprite and image_index >= attackStartFrame and !instance_exists(attackObj)){
 			
 			attackObj=instance_create_layer(x,y,"Instances",obj_compAttack);
+			if(!audio_is_playing(sndAttack)){
+				
+				audio_play_sound_at(sndAttack,x,y,0,50,100,1,false,0);
+			}
 		}
 	
 		if(instance_exists(attackObj)){
@@ -99,8 +109,9 @@ if(compHealth > 0){
 	}
 	
 }
-else{
+else if (sprite_index != deathSprite){
 	//kill self
+	image_index = 0;
 	event_user(1);
 	
 }

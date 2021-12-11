@@ -11,16 +11,21 @@ switch(attackNum){
 	//show_debug_message("attack 1 start: "+ string(ds_list_size(currentSkeletons)));
 		scr_bossSpawn(id,obj_skeleton,"ttt",1000,45);
 	//show_debug_message("attack 1 end: "+ string(ds_list_size(currentSkeletons)));
+		audio_play_sound_at(snd_lich_Growl,x,y,0,50,100,1,false,0);
+	sprite_index = spr_lichSummon;
 		break;
 	case 1:
 	//show_debug_message("attack 2 start: "+ string(ds_list_size(currentSkeletons)));
 		scr_bossSpawn(id,obj_skeleton,"tft",2000,22,1500);
 		//show_debug_message("attack 2 end: "+ string(ds_list_size(currentSkeletons)));
+		audio_play_sound_at(snd_lich_Growl,x,y,0,50,100,1,false,0);
+		sprite_index = spr_lichSummon;
 		break;
 	default:
 	//show_debug_message("attack 3 start: "+ string(ds_list_size(currentSkeletons)));
 		instance_create_layer(irandom_range(10356,14013),irandom_range(2379,2941),"Instances",obj_lichMagicAttack);
 		//show_debug_message("attack 3 end: "+ string(ds_list_size(currentSkeletons)));
+		sprite_index = spr_lichAttack;
 		break;
 }
 
@@ -38,5 +43,5 @@ switch(attackNum){
 	//start attackCooldown
 	canAttack = false;
 	alarm[0] = attackCooldown * room_speed;
-			
+	image_index = 0;
 

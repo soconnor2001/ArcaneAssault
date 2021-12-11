@@ -9,6 +9,6 @@ function scr_bossSpawn(bossObj,objToSpawn,pattern, distance,angle = 90,length = 
 	x2 = bossObj.x+(bossObj.image_xscale*distance)-(cos(angle*(pi/180))*length/2);
 	y2 = bossObj.y+600-(sin(angle*(pi/180))*length/2);
 	
-	return scr_spawnObjInLine(x1,y1,x2,y2,objToSpawn,pattern)
+	scr_spawnObjInLine(x1,y1,x2,y2,objToSpawn,pattern)
 	
 }

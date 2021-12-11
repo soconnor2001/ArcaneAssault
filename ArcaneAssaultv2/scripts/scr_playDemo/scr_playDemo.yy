@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "buttonScrips",
+    "path": "folders/Scripts/buttonScrips.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_playDemo",

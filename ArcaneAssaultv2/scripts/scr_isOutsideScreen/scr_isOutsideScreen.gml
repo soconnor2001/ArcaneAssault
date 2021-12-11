@@ -17,12 +17,20 @@ function scr_isOutsideScreen(thisObj,xOffset = undefined,yOffset = undefined,spr
 			sprW = thisObj.sprite_width;
 			
 		}catch(e){
-			tempObj = instance_create_layer(0,0,"Instances",thisObj.object_index);
+			
+			if(instance_exists(thisObj)){
+				tempObj = thisObj;
+			}
+			else{
+				tempObj = instance_create_layer(0,0,"Instances",thisObj.object_index);
+			}
 			xOffset = tempObj.sprite_xoffset;
 			yOffset = tempObj.sprite_yoffset;
 			sprH = tempObj.sprite_height;
 			sprW = tempObj.sprite_width;
-			instance_destroy(tempObj);
+			if(tempObj != thisObj){
+				instance_destroy(tempObj);
+			}
 		}
 		
 	}

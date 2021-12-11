@@ -50,6 +50,12 @@
       ],"resourceVersion":"1.0","name":"deathSprite","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"13","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"attackStartFrame","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":0,"value":"19","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"attackEndFrame","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"snd_broom_walk","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
+        "GMSound",
+      ],"resourceVersion":"1.0","name":"sndWalk","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":5,"value":"snd_wizardMelee","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
+        "GMSound",
+      ],"resourceVersion":"1.0","name":"sndAttack","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

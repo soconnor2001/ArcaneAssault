@@ -36,6 +36,7 @@ if(bossHealth > 0){
 			instance_create_layer(irandom_range(10356,14013),irandom_range(2379,2941),"Instances",obj_lichMagicAttack);
 			canAttack = false;
 			alarm[0] = attackCooldown * room_speed;
+			sprite_index = spr_lichAttack;
 			//show_debug_message("attack default end: "+ string(ds_list_size(currentSkeletons)));
 		}
 	
@@ -43,5 +44,10 @@ if(bossHealth > 0){
 	}
 
 }else{
-	instance_destroy();
+	
+	sprite_index = spr_lichDeath;
+	with(obj_skeleton){
+		enemyHealth = 0;
+	}
+	//instance_destroy();
 }

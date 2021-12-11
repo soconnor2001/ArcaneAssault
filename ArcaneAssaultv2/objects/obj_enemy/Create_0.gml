@@ -8,3 +8,4 @@ enemyHealth = maxHealth;
 canAttack = true;
 
 attackObj = noone;
+snd_walking = noone;

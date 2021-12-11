@@ -12,4 +12,5 @@ if(instance_exists(obj_player)){
 	}
 	speed = fireballSpeed;
 	depth = -y-1;
+	audio_play_sound(snd_fireball,1,false);
 }
