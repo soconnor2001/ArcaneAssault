@@ -1,4 +1,6 @@
 # Game Name: Arcane Assault
+###### Current Version: v3
+
 
 ## Students Names:
 - Producer: Noah Burkhimer
@@ -29,3 +31,5 @@ Exit off the right hand side of the screen once all the enemies have been defeat
 - Ctrl + h = fill health bar to max
 - Ctrl + m = fill mana bar to max
 - Ctrl + k = kill all skeletons on screen
+
+
