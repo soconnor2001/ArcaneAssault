@@ -6,7 +6,7 @@
 - Producer: Noah Burkhimer
 - Designer: Spencer Jackson
 - Artist: Evie Khang
-- Programmer: Hunter O'Connor
+- Programmer: Stella OConnor
 
 
 
